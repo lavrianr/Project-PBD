@@ -33,7 +33,7 @@ $data = $stmt->fetchAll();
                     <td><?= $row['idbarang'] ?></td>
                     <td><?= htmlspecialchars($row['nama']); ?></td>
                     <td><?= $row['jenis'] ?></td>
-                    <td><?= htmlspecialchars($row['idsatuan']); ?></td>
+                    <td><?= htmlspecialchars($row['satuan']); ?></td>
                     <td>Rp <?= number_format($row['harga'], 0, ',', '.') ?></td>
                     <td><?= $row['status'] ?? '-'; ?></td>
                 </tr>
