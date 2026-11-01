@@ -13,7 +13,7 @@ require_once __DIR__ . '/includes/header.php';
     <a class="menu-item" href="satuan/">Data Satuan</a>
 </div>
 
-<div class=""dashboard-card">
+<div class="dashboard-card">
     <h2>Transaksi</h2>
     <a class="menu-item" href="sp/laporan_stok.php">Laporan Stok</a>
     <a class="menu-item" href="sp/kartu_stok.php">Kartu Stok per Barang</a>

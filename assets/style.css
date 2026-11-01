@@ -9,7 +9,7 @@
     --muted: #5f664b;
     --glass: rgba(255, 255, 255, 0.38);
     --glass-soft: rgba(255, 255, 255, 0.45);
-    -glass-border: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.65);
 }
 
 * {
@@ -27,4 +27,202 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+}
+
+.dashboard-card,
+table,
+.pesan {
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    backdrop-filter: blur(28px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow:
+        0 8px 32px 0 rgba(74, 87, 38, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.dashboard-card {
+    padding: 28px;
+    border-radius: 26px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+h2 {
+    color: var(--olive-deep);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.dashboard-card h2 {
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 18px;
+    background: var(--glass-soft);
+    color: var(--ink);
+    text-decoration: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+}
+
+.menu-item:last-child {
+    margin-bottom: 0;
+}
+
+.menu-item:hover {
+    background: rgba(229, 138, 166, 0.38);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+}
+
+.btn,
+button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 22px;
+    background: linear-gradient(180deg, #d8708f, var(--pink-deep));
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(196, 85, 122, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.2s cubic-bezier(0.4, 0,, 0.2, 1);
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(196, 85, 122, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-ghost {
+    background: var(--glass-soft);
+    color: var(--olive-deep);
+    box-shadow: 0 4px 14px rgba(74, 87, 38, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+td .btn {
+    margin-bottom: 0;
+    padding: 7px 16px;
+}
+
+form p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input,
+select {
+    margin-top: 6px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.55);
+    color: var(--ink);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--pink-deep);
+    box-shadow: 0 0 0 3px rgba(196, 85, 122, 0.25);
+}
+
+.pesan {
+    padding: 13px 18px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pesan-ok { color: var(--olive-deep); }
+.pesan-err { color: #9b2c4f; }
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+th {
+    background: rgba(95, 110, 51, 0.78);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    padding: 15px 20px;
+    letter-spacing: 0.04em;
+}
+
+td {
+    padding: 15px 20px;
+    font-size: 14px;
+    color: var(--ink);
+    border-bottom: 1px solid rgba(74, 87, 38, 0.12);
+    vertical-align: middle;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+tbody tr:hover {
+    background: rgba(229, 138, 166, 0.28);
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td[colspan] {
+    text-align: center;
+    color: var(--muted);
+    padding: 30px;
+}
+
+@supports not ((backdrop-filter: blur(1px);)) or (-webkit-backdrop-filter: blur(1px)) {
+    .dashboard-card,
+    table,
+    .pesan {
+        background: rgba(255, 255, 255, 0.82);
+    }
 }

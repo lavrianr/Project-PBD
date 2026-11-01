@@ -10,7 +10,7 @@ $beranda = $beranda ?? false;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($judul) ?></title>
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/style.css?v=<?= time() ?>">
 </head>
 <body>
 <div class="container">
