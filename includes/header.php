@@ -15,6 +15,10 @@ $beranda = $beranda ?? false;
 <body>
 <div class="container">
     <h2><?= htmlspecialchars($judul) ?></h2>
-    <?php if (!$beranda): ?>
-        <a href="<?= BASE_URL ?>/index.php">Menu Utama</a>
+    <?php if ($beranda): ?>
+        <p style="margin-bottom: 20px;">
+            <a href="<?= BASE_URL ?>/pengadaan/index.php" class="btn">Pengadaan</a>
+            <a href="<?= BASE_URL ?>/penerimaan/index.php" class="btn">Penerimaan</a>
+            <a href="<?= BASE_URL ?>/penjualan/index.php" class="btn">Penjualan</a>
+        </p>
     <?php endif; ?>

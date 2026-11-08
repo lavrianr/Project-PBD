@@ -24,7 +24,7 @@ $data_satuan = $stmt->fetchAll();
     <h2>Data Satuan Barang</h2>
     <p>
         <a href="tambah.php" class="btn">+ Tambah Satuan</a>
-        <a href="../index.php" class="btn" style="background:#fff; color:#000;">Menu Utama</a>
+        <a href="../index.php" class="btn" style="background:#fff; color:#000;">&laquo; Menu Utama</a>
     </p>
 
     <table>

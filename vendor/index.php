@@ -21,7 +21,6 @@ $data_vendor = $stmt->fetchAll();
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-    <h2>Data Vendor</h2>
     <p>
         <a href="tambah.php" class="btn">+ Tambah Vendor</a>
         <a href="../index.php" class="btn" style="background:#fff; color:#000;">Menu Utama</a>
