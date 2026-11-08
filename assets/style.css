@@ -21,7 +21,7 @@
 
 body {
     min-height: 100vh;
-    background-color: #f4b6c6;
+    background-color: #fff0f0;
     color: var(--ink);
     padding: 40px 20px;
     display: flex;
