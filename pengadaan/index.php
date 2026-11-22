@@ -15,7 +15,7 @@ $stmt->closeCursor();
 </p>
 
 <table>
-    <thead>
+    <thead>                                                                                                                                                                                                                                                                                                                                                     
         <tr>
             <th>ID</th>
             <th>Tanggal</th>

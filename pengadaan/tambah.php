@@ -113,7 +113,7 @@ function tambahBaris() {
     
     tbody.appendChild(barisBaru);
 }
-
+  
 function hapusBaris(btn) {
     let tbody = document.querySelector("#tabel-barang tbody");
     if (tbody.children.length > 1) {
